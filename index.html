@@ -1,0 +1,1405 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>r星精选 - 官方视频品牌站,精选影像内容生态</title>
+<meta name="description" content="r星精选官方网站，专注高品质原创影像内容与创作者社区，为观众与企业提供专业、正版、值得信赖的视频品牌平台。">
+<meta name="keywords" content="r星精选,官方网站,视频品牌,原创影像,创作者社区,内容生态">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23191d2b'/%3E%3Cpath d='M26 20l18 12-18 12z' fill='%23ff5c39'/%3E%3C/svg%3E">
+<style>
+:root{
+  --rsn-bg:#0f1219;
+  --rsn-panel:#171c28;
+  --rsn-panel-2:#1e2434;
+  --rsn-line:rgba(255,255,255,.08);
+  --rsn-text:#e8ecf4;
+  --rsn-sub:#9aa5bd;
+  --rsn-accent:#ff5c39;
+  --rsn-accent-soft:rgba(255,92,57,.14);
+  --rsn-green:#3ee0a1;
+  --rsn-radius:16px;
+  --rsn-max:1180px;
+  --rsn-top:0px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(1100px 520px at 85% -10%, rgba(255,92,57,.16), transparent 60%),
+    radial-gradient(900px 480px at 5% 15%, rgba(62,224,161,.08), transparent 60%),
+    var(--rsn-bg);
+  color:var(--rsn-text);
+  font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  font-size:16px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+h1,h2,h3,h4{margin:0;line-height:1.3;letter-spacing:.2px}
+p{margin:0 0 12px}
+ul{margin:0;padding:0;list-style:none}
+section{scroll-margin-top:calc(var(--rsn-top) + 16px)}
+
+/* 吸顶容器 */
+.rsn-sticky{position:sticky;top:0;z-index:60}
+.rsn-announce{
+  background:linear-gradient(90deg,#ff5c39,#ff8a3d 55%,#ffb03a);
+  color:#1a1305;
+  font-size:13.5px;
+  font-weight:600;
+  padding:9px 18px;
+  display:flex;
+  gap:14px;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  flex-wrap:wrap;
+}
+.rsn-announce__tag{
+  background:#1a1305;
+  color:#ffd9a8;
+  border-radius:999px;
+  font-size:11.5px;
+  letter-spacing:1px;
+  padding:2px 9px;
+  font-weight:700;
+}
+.rsn-announce a{text-decoration:underline;text-underline-offset:3px}
+
+.rsn-header{
+  background:rgba(15,18,25,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--rsn-line);
+}
+.rsn-header__inner{
+  max-width:var(--rsn-max);
+  margin:0 auto;
+  padding:0 20px;
+  height:68px;
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.rsn-brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.rsn-brand__mark{
+  width:38px;height:38px;border-radius:11px;
+  background:linear-gradient(135deg,#ff5c39,#ffb03a);
+  display:grid;place-items:center;
+  box-shadow:0 6px 18px rgba(255,92,57,.35);
+}
+.rsn-brand__mark svg{width:18px;height:18px}
+.rsn-brand__name{font-size:19px;font-weight:800;letter-spacing:.5px}
+.rsn-brand__name em{color:var(--rsn-accent);font-style:normal}
+.rsn-brand__sub{font-size:11px;color:var(--rsn-sub);letter-spacing:2px}
+
+.rsn-nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.rsn-nav a{
+  font-size:14.5px;color:var(--rsn-sub);
+  padding:8px 13px;border-radius:9px;
+  transition:.2s;
+}
+.rsn-nav a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.rsn-nav a.rsn-nav--active{color:#fff;background:var(--rsn-accent-soft)}
+.rsn-nav__toggle{
+  display:none;margin-left:auto;background:transparent;border:1px solid var(--rsn-line);
+  color:var(--rsn-text);border-radius:10px;width:42px;height:40px;font-size:18px;
+}
+
+.rsn-search{
+  display:flex;align-items:center;gap:8px;
+  background:var(--rsn-panel);border:1px solid var(--rsn-line);
+  border-radius:999px;padding:6px 6px 6px 14px;
+  width:230px;transition:.2s;
+}
+.rsn-search:focus-within{border-color:rgba(255,92,57,.6);box-shadow:0 0 0 3px rgba(255,92,57,.12)}
+.rsn-search input{
+  background:transparent;border:0;outline:0;color:var(--rsn-text);
+  font-size:13.5px;width:100%;
+}
+.rsn-search input::placeholder{color:#66718a}
+.rsn-search button{
+  background:var(--rsn-accent);border:0;color:#1a1305;font-weight:700;
+  font-size:13px;border-radius:999px;padding:6px 13px;
+}
+.rsn-search__hint{
+  max-width:var(--rsn-max);margin:0 auto;padding:0 20px;
+  font-size:12.5px;color:var(--rsn-accent);
+  height:0;overflow:hidden;transition:.2s;
+}
+.rsn-search__hint.rsn-open{height:30px;padding-top:4px}
+
+/* 通用容器 */
+.rsn-wrap{max-width:var(--rsn-max);margin:0 auto;padding:0 20px}
+.rsn-section{padding:64px 0}
+.rsn-section--tight{padding:44px 0}
+.rsn-eyebrow{
+  font-size:12.5px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--rsn-accent);font-weight:700;margin-bottom:10px;
+}
+.rsn-h2{font-size:clamp(24px,3vw,32px);font-weight:800;margin-bottom:12px}
+.rsn-h2 em{color:var(--rsn-accent);font-style:normal}
+.rsn-lead{color:var(--rsn-sub);max-width:760px;font-size:15.5px}
+.rsn-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:30px;flex-wrap:wrap}
+.rsn-more{font-size:13.5px;color:var(--rsn-accent);border:1px solid rgba(255,92,57,.4);padding:7px 15px;border-radius:999px}
+.rsn-more:hover{background:var(--rsn-accent-soft)}
+
+/* 按钮 */
+.rsn-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  border-radius:12px;padding:12px 22px;font-size:14.5px;font-weight:700;
+  border:1px solid transparent;transition:.2s;
+}
+.rsn-btn--primary{background:var(--rsn-accent);color:#1a1305}
+.rsn-btn--primary:hover{background:#ff7a5c;transform:translateY(-2px)}
+.rsn-btn--ghost{border-color:var(--rsn-line);color:var(--rsn-text);background:rgba(255,255,255,.03)}
+.rsn-btn--ghost:hover{border-color:rgba(255,92,57,.5);color:var(--rsn-accent)}
+.rsn-btn--sm{padding:8px 15px;font-size:13px;border-radius:9px}
+
+/* 首屏 */
+.rsn-hero{padding:52px 0 30px;position:relative;overflow:hidden}
+.rsn-hero__grid{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center}
+.rsn-hero h1{font-size:clamp(34px,5vw,58px);font-weight:900;letter-spacing:-1px;margin-bottom:14px}
+.rsn-hero h1 span{
+  background:linear-gradient(100deg,#ff8a3d,#ff5c39 60%,#ffb03a);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.rsn-hero__slogan{font-size:17px;color:#cdd5e6;margin-bottom:16px;font-weight:600}
+.rsn-hero__intro{color:var(--rsn-sub);font-size:14.8px;margin-bottom:24px}
+.rsn-hero__actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.rsn-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rsn-stats__item{background:var(--rsn-panel);border:1px solid var(--rsn-line);border-radius:14px;padding:14px 16px}
+.rsn-stats__num{font-size:23px;font-weight:900;color:var(--rsn-accent)}
+.rsn-stats__label{font-size:12.5px;color:var(--rsn-sub)}
+
+.rsn-hero__visual{position:relative}
+.rsn-hero__frame{
+  border-radius:22px;overflow:hidden;border:1px solid var(--rsn-line);
+  box-shadow:0 30px 70px rgba(0,0,0,.5);
+  position:relative;aspect-ratio:16/10;
+}
+.rsn-hero__frame img{width:100%;height:100%;object-fit:cover}
+.rsn-hero__badge{
+  position:absolute;left:18px;top:18px;background:rgba(15,18,25,.8);
+  border:1px solid rgba(255,255,255,.16);border-radius:999px;
+  font-size:12px;padding:6px 13px;font-weight:700;letter-spacing:1px;
+}
+.rsn-hero__play{
+  position:absolute;inset:0;display:grid;place-items:center;
+}
+.rsn-hero__play span{
+  width:66px;height:66px;border-radius:50%;
+  background:rgba(255,92,57,.92);display:grid;place-items:center;
+  box-shadow:0 0 0 0 rgba(255,92,57,.5);animation:rsn-pulse 2.4s infinite;
+}
+@keyframes rsn-pulse{
+  0%{box-shadow:0 0 0 0 rgba(255,92,57,.5)}
+  70%{box-shadow:0 0 0 22px rgba(255,92,57,0)}
+  100%{box-shadow:0 0 0 0 rgba(255,92,57,0)}
+}
+.rsn-hero__meta{
+  position:absolute;left:0;right:0;bottom:0;padding:38px 18px 16px;
+  background:linear-gradient(transparent,rgba(10,13,20,.92));
+  display:flex;justify-content:space-between;align-items:flex-end;gap:10px;flex-wrap:wrap;
+}
+.rsn-hero__meta strong{font-size:15px}
+.rsn-hero__meta span{font-size:12.5px;color:var(--rsn-sub)}
+
+/* 深度解析 */
+.rsn-about{
+  background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);
+  border-top:1px solid var(--rsn-line);border-bottom:1px solid var(--rsn-line);
+}
+.rsn-about__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+.rsn-about__col p{color:#c2cbe0;font-size:15px}
+.rsn-about__tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.rsn-tag{
+  font-size:12.5px;padding:5px 12px;border-radius:999px;
+  border:1px solid var(--rsn-line);color:var(--rsn-sub);background:rgba(255,255,255,.02);
+}
+.rsn-tag--hot{border-color:rgba(255,92,57,.45);color:var(--rsn-accent);background:var(--rsn-accent-soft)}
+.rsn-tag--green{border-color:rgba(62,224,161,.4);color:var(--rsn-green);background:rgba(62,224,161,.08)}
+
+/* 焦点视频 */
+.rsn-focus__grid{display:grid;grid-template-columns:1.25fr .75fr;gap:22px}
+.rsn-card{
+  background:var(--rsn-panel);border:1px solid var(--rsn-line);
+  border-radius:var(--rsn-radius);overflow:hidden;
+  transition:transform .25s,border-color .25s,box-shadow .25s;
+  display:flex;flex-direction:column;
+}
+.rsn-card:hover{transform:translateY(-4px);border-color:rgba(255,92,57,.35);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.rsn-cover{position:relative;aspect-ratio:16/9;overflow:hidden}
+.rsn-cover img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.rsn-card:hover .rsn-cover img{transform:scale(1.05)}
+.rsn-cover__mask{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,13,20,.35),transparent 55%);
+}
+.rsn-cover__label{
+  position:absolute;left:12px;top:12px;font-size:11.5px;font-weight:700;
+  background:rgba(15,18,25,.82);border:1px solid rgba(255,255,255,.16);
+  border-radius:999px;padding:4px 11px;letter-spacing:.5px;
+}
+.rsn-cover__label--accent{background:var(--rsn-accent);color:#1a1305;border-color:transparent}
+.rsn-cover__time{
+  position:absolute;right:12px;bottom:12px;font-size:12px;
+  background:rgba(10,13,20,.8);border-radius:6px;padding:2px 8px;color:#dfe6f3;
+}
+.rsn-card__body{padding:16px 17px 18px;display:flex;flex-direction:column;gap:9px;flex:1}
+.rsn-card__title{font-size:16px;font-weight:700;line-height:1.45}
+.rsn-card__desc{font-size:13.5px;color:var(--rsn-sub);margin:0}
+.rsn-card__foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:8px;flex-wrap:wrap}
+.rsn-card__author{display:flex;align-items:center;gap:8px;font-size:12.8px;color:var(--rsn-sub)}
+.rsn-avatar{
+  width:26px;height:26px;border-radius:50%;display:grid;place-items:center;
+  font-size:12px;font-weight:800;color:#101319;flex-shrink:0;
+}
+.rsn-tools{display:flex;gap:6px}
+.rsn-icon-btn{
+  background:rgba(255,255,255,.04);border:1px solid var(--rsn-line);
+  color:var(--rsn-sub);border-radius:8px;padding:4px 9px;font-size:12.3px;
+  display:inline-flex;align-items:center;gap:5px;transition:.18s;
+}
+.rsn-icon-btn:hover{color:#fff;border-color:rgba(255,92,57,.45)}
+.rsn-icon-btn.rsn-on{color:var(--rsn-accent);border-color:rgba(255,92,57,.55);background:var(--rsn-accent-soft)}
+.rsn-icon-btn.rsn-on[data-role="like"]{color:#ff8a3d}
+.rsn-focus__side{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+.rsn-mini{background:var(--rsn-panel);border:1px solid var(--rsn-line);border-radius:14px;overflow:hidden;transition:.22s}
+.rsn-mini:hover{transform:translateY(-3px);border-color:rgba(255,92,57,.3)}
+.rsn-mini img{aspect-ratio:16/9;object-fit:cover;width:100%}
+.rsn-mini__body{padding:10px 12px 13px}
+.rsn-mini__title{font-size:13.5px;font-weight:700;line-height:1.45;margin-bottom:4px}
+.rsn-mini__meta{font-size:11.8px;color:var(--rsn-sub)}
+
+/* 视频流 */
+.rsn-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+/* 专题 */
+.rsn-topics{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rsn-topic{
+  position:relative;border-radius:var(--rsn-radius);overflow:hidden;
+  border:1px solid var(--rsn-line);min-height:210px;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:18px;
+}
+.rsn-topic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.rsn-topic::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,13,20,.94) 12%,rgba(10,13,20,.35) 70%,transparent)}
+.rsn-topic>*{position:relative;z-index:2}
+.rsn-topic h3{font-size:17.5px;margin-bottom:6px}
+.rsn-topic p{font-size:13px;color:#c3ccdf;margin:0 0 10px}
+.rsn-topic__status{font-size:11.8px;display:inline-flex;align-items:center;gap:6px;color:var(--rsn-green);font-weight:700}
+.rsn-dot{width:7px;height:7px;border-radius:50%;background:var(--rsn-green);display:inline-block}
+
+/* 创作者 */
+.rsn-creators{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.rsn-creator{
+  background:var(--rsn-panel);border:1px solid var(--rsn-line);
+  border-radius:14px;padding:18px 16px;text-align:center;transition:.22s;
+}
+.rsn-creator:hover{border-color:rgba(255,92,57,.4);transform:translateY(-3px)}
+.rsn-creator__avatar{
+  width:62px;height:62px;border-radius:20px;margin:0 auto 12px;
+  display:grid;place-items:center;font-size:22px;font-weight:900;color:#101319;
+}
+.rsn-creator__name{font-size:15px;font-weight:800;margin-bottom:3px}
+.rsn-creator__field{font-size:12px;color:var(--rsn-accent);margin-bottom:8px}
+.rsn-creator__bio{font-size:12.5px;color:var(--rsn-sub);margin-bottom:10px;min-height:52px}
+.rsn-creator__nums{display:flex;justify-content:center;gap:16px;font-size:12px;color:var(--rsn-sub);border-top:1px dashed var(--rsn-line);padding-top:10px}
+.rsn-creator__nums b{color:var(--rsn-text)}
+
+/* 榜单 */
+.rsn-rank{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.rsn-rank__box{background:var(--rsn-panel);border:1px solid var(--rsn-line);border-radius:var(--rsn-radius);padding:20px 22px}
+.rsn-rank__box h3{font-size:17px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.rsn-rank__box h3 span{font-size:11.5px;color:var(--rsn-accent);font-weight:700;letter-spacing:1px}
+.rsn-rank__item{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px dashed var(--rsn-line);font-size:13.8px}
+.rsn-rank__item:last-child{border-bottom:0}
+.rsn-rank__no{width:22px;height:22px;border-radius:7px;display:grid;place-items:center;font-size:12px;font-weight:800;background:rgba(255,255,255,.06);color:var(--rsn-sub);flex-shrink:0}
+.rsn-rank__item:nth-child(2) .rsn-rank__no{background:var(--rsn-accent);color:#1a1305}
+.rsn-rank__item:nth-child(3) .rsn-rank__no{background:rgba(255,92,57,.45);color:#fff}
+.rsn-rank__name{flex:1}
+.rsn-rank__val{font-size:12.5px;color:var(--rsn-accent)}
+
+/* 评论 */
+.rsn-reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rsn-review{
+  background:var(--rsn-panel-2);border:1px solid var(--rsn-line);
+  border-radius:14px;padding:16px 17px;font-size:13.6px;color:#c8d1e4;
+  position:relative;
+}
+.rsn-review::before{
+  content:"“";position:absolute;top:2px;left:12px;font-size:38px;
+  color:rgba(255,92,57,.28);font-family:Georgia,serif;line-height:1;
+}
+.rsn-review p{margin:14px 0 12px}
+.rsn-review__who{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--rsn-sub)}
+
+/* 动态 */
+.rsn-news{display:grid;gap:12px}
+.rsn-news__item{
+  display:flex;gap:16px;align-items:center;
+  background:var(--rsn-panel);border:1px solid var(--rsn-line);
+  border-radius:12px;padding:14px 18px;transition:.2s;flex-wrap:wrap;
+}
+.rsn-news__item:hover{border-color:rgba(255,92,57,.35)}
+.rsn-news__date{font-size:12.5px;color:var(--rsn-accent);font-weight:700;min-width:88px}
+.rsn-news__title{flex:1;font-size:14.5px;font-weight:600;min-width:200px}
+.rsn-news__tag{font-size:11.5px;color:var(--rsn-sub);border:1px solid var(--rsn-line);border-radius:999px;padding:2px 10px}
+
+/* 灵感工具 */
+.rsn-ideas{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+.rsn-idea-form{background:var(--rsn-panel);border:1px solid var(--rsn-line);border-radius:var(--rsn-radius);padding:22px}
+.rsn-idea-form label{font-size:13px;color:var(--rsn-sub);display:block;margin-bottom:8px}
+.rsn-idea-form input{
+  width:100%;background:var(--rsn-bg);border:1px solid var(--rsn-line);
+  border-radius:10px;color:var(--rsn-text);padding:11px 14px;font-size:14px;outline:0;margin-bottom:14px;
+}
+.rsn-idea-form input:focus{border-color:rgba(255,92,57,.6)}
+.rsn-idea-result{display:flex;flex-direction:column;gap:10px}
+.rsn-idea-item{
+  background:var(--rsn-panel-2);border-left:3px solid var(--rsn-accent);
+  border-radius:0 10px 10px 0;padding:11px 14px;font-size:13.6px;color:#cfd8e9;
+}
+.rsn-idea-item b{color:var(--rsn-accent)}
+
+/* FAQ */
+.rsn-faq{max-width:860px;margin:0 auto}
+.rsn-faq details{
+  background:var(--rsn-panel);border:1px solid var(--rsn-line);
+  border-radius:12px;margin-bottom:10px;overflow:hidden;
+}
+.rsn-faq summary{
+  padding:15px 18px;font-size:14.8px;font-weight:600;cursor:pointer;
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+.rsn-faq summary::-webkit-details-marker{display:none}
+.rsn-faq summary::after{content:"+";color:var(--rsn-accent);font-size:19px;font-weight:700;transition:.2s}
+.rsn-faq details[open] summary::after{content:"−"}
+.rsn-faq details p{padding:0 18px 16px;color:var(--rsn-sub);font-size:13.8px;margin:0}
+
+/* 联系 */
+.rsn-contact{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.rsn-contact__info{background:var(--rsn-panel);border:1px solid var(--rsn-line);border-radius:var(--rsn-radius);padding:24px}
+.rsn-contact__row{display:flex;gap:10px;font-size:14px;color:#c5cfe2;margin-bottom:12px}
+.rsn-contact__row b{color:var(--rsn-accent);font-weight:700;min-width:76px}
+
+/* 页脚 */
+.rsn-footer{border-top:1px solid var(--rsn-line);background:rgba(0,0,0,.22);padding:40px 0 26px;margin-top:20px}
+.rsn-footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;margin-bottom:26px}
+.rsn-footer h4{font-size:14px;margin-bottom:12px;color:#fff}
+.rsn-footer a,.rsn-footer p{font-size:13px;color:var(--rsn-sub);margin:0 0 8px}
+.rsn-footer a:hover{color:var(--rsn-accent)}
+.rsn-footer__bottom{border-top:1px solid var(--rsn-line);padding-top:18px;display:flex;justify-content:space-between;gap:14px;font-size:12.5px;color:#78839b;flex-wrap:wrap}
+
+/* 回到顶部 */
+.rsn-top-btn{
+  position:fixed;right:22px;bottom:24px;z-index:70;
+  width:46px;height:46px;border-radius:14px;
+  background:var(--rsn-accent);color:#1a1305;border:0;
+  font-size:19px;font-weight:800;display:none;place-items:center;
+  box-shadow:0 10px 24px rgba(255,92,57,.4);
+}
+.rsn-top-btn.rsn-show{display:grid}
+
+/* 弹窗 / Toast */
+.rsn-modal{
+  position:fixed;inset:0;z-index:90;display:none;place-items:center;
+  background:rgba(6,8,13,.72);padding:20px;
+}
+.rsn-modal.rsn-open{display:grid}
+.rsn-modal__box{
+  background:var(--rsn-panel);border:1px solid var(--rsn-line);
+  border-radius:18px;max-width:520px;width:100%;padding:24px;position:relative;
+  max-height:86vh;overflow:auto;
+}
+.rsn-modal__box h3{font-size:19px;margin-bottom:10px}
+.rsn-modal__box p{font-size:14px;color:var(--rsn-sub)}
+.rsn-modal__close{
+  position:absolute;right:14px;top:12px;background:transparent;border:0;
+  color:var(--rsn-sub);font-size:22px;line-height:1;
+}
+.rsn-modal__close:hover{color:var(--rsn-accent)}
+.rsn-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:#f4f7ff;color:#151a24;font-size:13.5px;font-weight:600;
+  padding:11px 20px;border-radius:999px;z-index:100;opacity:0;pointer-events:none;
+  transition:.25s;box-shadow:0 12px 30px rgba(0,0,0,.35);
+}
+.rsn-toast.rsn-show{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:1020px){
+  .rsn-hero__grid,.rsn-about__grid,.rsn-focus__grid,.rsn-ideas,.rsn-contact{grid-template-columns:1fr}
+  .rsn-flow,.rsn-topics,.rsn-reviews{grid-template-columns:repeat(2,1fr)}
+  .rsn-creators{grid-template-columns:repeat(2,1fr)}
+  .rsn-footer__grid{grid-template-columns:1fr 1fr}
+  .rsn-rank{grid-template-columns:1fr}
+  .rsn-search{width:180px}
+}
+@media (max-width:760px){
+  .rsn-header__inner{height:auto;padding:12px 16px;flex-wrap:wrap}
+  .rsn-nav{
+    display:none;width:100%;flex-direction:column;gap:2px;padding:8px 0 4px;
+    margin-left:0;border-top:1px solid var(--rsn-line);
+  }
+  .rsn-nav.rsn-open{display:flex}
+  .rsn-nav a{padding:10px 12px;font-size:15px}
+  .rsn-nav__toggle{display:block}
+  .rsn-search{width:100%;order:5;margin-top:6px}
+  .rsn-flow,.rsn-topics,.rsn-reviews,.rsn-focus__side{grid-template-columns:1fr}
+  .rsn-creators{grid-template-columns:1fr}
+  .rsn-footer__grid{grid-template-columns:1fr}
+  .rsn-section{padding:44px 0}
+  .rsn-stats{grid-template-columns:1fr 1fr}
+  .rsn-hero{padding:34px 0 16px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="rsn-sticky" id="rsnTop">
+  <div class="rsn-announce">
+    <span class="rsn-announce__tag">官方发布</span>
+    <span>r星精选 11 月内容季上新：新增 4 个原创影像专题、12 位创作者入驻、首届「街头一分钟」短片挑战报名开启。</span>
+    <a href="#rsnNews">查看更新详情 →</a>
+  </div>
+
+  <header class="rsn-header">
+    <div class="rsn-header__inner">
+      <a href="#rsnTop" class="rsn-brand" aria-label="r星精选官方网站首页">
+        <span class="rsn-brand__mark">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l10 6-10 6V6z" fill="#1a1305"/></svg>
+        </span>
+        <span>
+          <span class="rsn-brand__name">r星<em>精选</em></span>
+          <span class="rsn-brand__sub">R·STAR SELECT</span>
+        </span>
+      </a>
+
+      <button class="rsn-nav__toggle" id="rsnNavToggle" aria-label="展开导航菜单" aria-expanded="false">☰</button>
+
+      <nav class="rsn-nav" id="rsnNav">
+        <a href="#rsnTop" class="rsn-nav--active">首页</a>
+        <a href="#rsnFocus">焦点影像</a>
+        <a href="#rsnTopics">原创专题</a>
+        <a href="#rsnCreators">创作者</a>
+        <a href="#rsnRank">榜单</a>
+        <a href="#rsnNews">企业动态</a>
+        <a href="#rsnFaq">帮助</a>
+        <a href="#rsnContact">联系</a>
+      </nav>
+
+      <div class="rsn-search">
+        <input type="search" id="rsnSearchInput" placeholder="搜索影片、创作者、专题" aria-label="站内搜索">
+        <button type="button" id="rsnSearchBtn">搜索</button>
+      </div>
+    </div>
+    <div class="rsn-search__hint" id="rsnSearchHint" role="status" aria-live="polite"></div>
+  </header>
+</div>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="rsn-hero" id="rsnHero">
+    <div class="rsn-wrap">
+      <div class="rsn-hero__grid">
+        <div>
+          <div class="rsn-eyebrow">R·STAR SELECT OFFICIAL</div>
+          <h1>r星精选<span>影像有质感，也有温度</span></h1>
+          <p class="rsn-hero__slogan">r星精选官方网站 · 一个专注原创高清影像的品牌内容平台</p>
+          <p class="rsn-hero__intro">
+            作为深耕影像内容领域的企业品牌，r星精选以「精选」为方法论，以「真实」为底色，持续为观众与创作者搭建高品质内容生态。
+            我们聚合原创短片、城市记录、人物访谈、实用教程与行业观察，用专业策展与技术分发，让每一段值得被看见的影像拥有清晰的位置。
+            平台坚持正版授权与品质审核，重视口碑与长期陪伴，愿做你在喧嚣信息中最值得信赖的那一处影像橱窗。
+          </p>
+          <div class="rsn-hero__actions">
+            <a href="#rsnFocus" class="rsn-btn rsn-btn--primary">进入焦点影像 →</a>
+            <a href="#rsnContact" class="rsn-btn rsn-btn--ghost">创作者投稿</a>
+            <button type="button" class="rsn-btn rsn-btn--ghost" id="rsnShareHero">分享本站</button>
+          </div>
+          <div class="rsn-stats">
+            <div class="rsn-stats__item">
+              <div class="rsn-stats__num" data-rsn-count="12800">12800</div>
+              <div class="rsn-stats__label">部原创高清影像</div>
+            </div>
+            <div class="rsn-stats__item">
+              <div class="rsn-stats__num" data-rsn-count="960">960</div>
+              <div class="rsn-stats__label">位签约与入驻创作者</div>
+            </div>
+            <div class="rsn-stats__item">
+              <div class="rsn-stats__num" data-rsn-count="7">7</div>
+              <div class="rsn-stats__label">年持续运营内容社区</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rsn-hero__visual">
+          <div class="rsn-hero__frame">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23141b2c'/%3E%3Cstop offset='.55' stop-color='%23302247'/%3E%3Cstop offset='1' stop-color='%23ff5c39'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23ffb03a' stop-opacity='.9'/%3E%3Cstop offset='1' stop-color='%23ff5c39' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g1)'/%3E%3Ccircle cx='620' cy='130' r='150' fill='url(%23g2)' opacity='.55'/%3E%3Ccircle cx='180' cy='390' r='120' fill='%233ee0a1' opacity='.14'/%3E%3Cg stroke='%23ffffff' stroke-opacity='.22' fill='none'%3E%3Cpath d='M0 360 Q200 300 400 350 T800 320' stroke-width='2'/%3E%3Cpath d='M0 400 Q220 340 420 390 T800 360' stroke-width='1.4'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.85'%3E%3Crect x='80' y='90' width='150' height='8' rx='4'/%3E%3Crect x='80' y='112' width='96' height='8' rx='4' opacity='.6'/%3E%3C/g%3E%3Cpath d='M380 200l70 40-70 40z' fill='%23ffffff' opacity='.9'/%3E%3C/svg%3E" alt="r星精选官方网站首屏主视觉：夜色中的影像播放与品牌光带">
+            <span class="rsn-hero__badge">本周主推 · 精选策划</span>
+            <span class="rsn-hero__play" aria-hidden="true"><span><svg width="22" height="22" viewBox="0 0 24 24"><path d="M9 6l10 6-10 6V6z" fill="#1a1305"/></svg></span></span>
+            <div class="rsn-hero__meta">
+              <strong>《一城一镜》第六季 · 首集上线</strong>
+              <span>城市探索 / 4K 高清 / 24 分钟</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 深度解析 -->
+  <section class="rsn-section rsn-about" id="rsnAbout">
+    <div class="rsn-wrap">
+      <div class="rsn-eyebrow">ABOUT R·STAR SELECT</div>
+      <h2 class="rsn-h2">关于 <em>r星精选</em>：我们如何定义「精选」</h2>
+      <div class="rsn-about__grid">
+        <div class="rsn-about__col">
+          <p>
+            r星精选是一个以原创影像为核心的企业级视频品牌。我们不追求内容的无限堆积，而是坚持「少而准」的策展逻辑：
+            每一部进入首页的作品，都会经过选题价值、影像质量、叙事完整度与版权合规四道审核。平台的内容生态由三部分构成——
+            官方自制专题、签约创作者原创作品，以及开放社区的用户投稿，三者互为补充，共同构成一个多元、包容且持续生长的影像库。
+          </p>
+          <p>
+            在过去七年的持续运营中，r星精选逐步形成了稳定的内容方法：用城市探索连接地域文化，用人物访谈留住个体经验，
+            用教程干货降低创作门槛，用行业观察提供更冷静的视角。我们相信影像不只是消遣，它可以是知识的载体、情感的容器，
+            也可以是普通人与世界建立联系的方式。正因如此，平台在技术之外更重视人的部分——尊重创作者，尊重观众的时间。
+          </p>
+          <div class="rsn-about__tags">
+            <span class="rsn-tag rsn-tag--hot">官方网站</span>
+            <span class="rsn-tag">原创正版</span>
+            <span class="rsn-tag">高清画质</span>
+            <span class="rsn-tag rsn-tag--green">内容生态</span>
+            <span class="rsn-tag">创作者社区</span>
+            <span class="rsn-tag">品质口碑</span>
+            <span class="rsn-tag">持续运营</span>
+          </div>
+        </div>
+        <div class="rsn-about__col">
+          <p>
+            从品牌定位上看，r星精选服务于两类人群：一是希望在有限时间里看到高质量内容的观众，二是希望被认真对待的创作者。
+            对前者，我们提供清晰的分类、可靠的画质与克制的推荐；对后者，我们提供从选题辅导、拍摄支持到分发推广的完整链路，
+            并坚持收益透明与版权保护。平台的「精选」并非精英主义的筛选，而是一种责任：把注意力留给真正完成度高的作品。
+          </p>
+          <p>
+            面向未来，r星精选将继续在垂直领域深耕，拓展纪实、生活、知识、艺术四条内容主线，同时加大对新人创作者的扶持力度。
+            我们会持续举办短片挑战、主题征集与线下放映，让社区从屏幕走向现实。作为一个有社会责任感的视频品牌，
+            我们希望自己在商业之外，仍能保有一份匠心与温度：记录真实，陪伴成长，把力量交给那些愿意认真讲故事的人。
+          </p>
+          <p>
+            如果你第一次来到 r星精选，可以从焦点影像开始；如果你是创作者，欢迎从投稿入口提交作品。官方网站的所有内容均为官方发布或经授权展示，
+            我们珍惜每一次点击，也珍惜每一份信任。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点影像 -->
+  <section class="rsn-section" id="rsnFocus">
+    <div class="rsn-wrap">
+      <div class="rsn-sec-head">
+        <div>
+          <div class="rsn-eyebrow">FEATURED</div>
+          <h2 class="rsn-h2">焦点影像 · 本期<em>精选推荐</em></h2>
+          <p class="rsn-lead">由编辑团队与社区共同推选，覆盖城市、人物、技艺与生活四个方向的高完成度作品。</p>
+        </div>
+        <a href="#rsnFlow" class="rsn-more">浏览全部内容</a>
+      </div>
+
+      <div class="rsn-focus__grid">
+        <article class="rsn-card">
+          <div class="rsn-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='a1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230b1c2b'/%3E%3Cstop offset='1' stop-color='%232c6f8f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23a1)'/%3E%3Cg fill='%23a9e4f5' opacity='.22'%3E%3Crect x='0' y='300' width='800' height='150'/%3E%3C/g%3E%3Cg stroke='%23e8f6ff' stroke-opacity='.4' fill='none' stroke-width='2'%3E%3Cpath d='M60 330 L160 250 L260 330 L360 230 L460 330 L560 240 L660 330 L760 250'/%3E%3C/g%3E%3Ccircle cx='640' cy='110' r='52' fill='%23ffe9a8' opacity='.85'/%3E%3Cg fill='%23ffffff' opacity='.9'%3E%3Crect x='60' y='70' width='210' height='10' rx='5'/%3E%3Crect x='60' y='96' width='120' height='10' rx='5' opacity='.55'/%3E%3C/g%3E%3C/svg%3E" alt="《一城一镜》第六季首集封面：蓝色夜色下的城市轮廓与月亮">
+            <span class="rsn-cover__mask"></span>
+            <span class="rsn-cover__label rsn-cover__label--accent">焦点首推</span>
+            <span class="rsn-cover__time">24:36</span>
+          </div>
+          <div class="rsn-card__body">
+            <h3 class="rsn-card__title">《一城一镜》第六季 01：凌晨四点的水产市场，与这座城市的早班人</h3>
+            <p class="rsn-card__desc">跟着搬运工老陈走完他的一天：从冷库到摊位，从黑暗到天亮。我们用一集 24 分钟的纪录短片，记录城市苏醒前最真实的劳动现场。</p>
+            <div class="rsn-card__foot">
+              <span class="rsn-card__author">
+                <span class="rsn-avatar" style="background:linear-gradient(135deg,#3ee0a1,#7ce6ff)">一</span>
+                r星精选官方
+              </span>
+              <div class="rsn-tools">
+                <button class="rsn-icon-btn" data-role="like" data-count="2381" aria-label="点赞">♥ <span>2381</span></button>
+                <button class="rsn-icon-btn" data-role="fav" aria-label="收藏">☆ 收藏</button>
+                <button class="rsn-icon-btn" data-role="copy" aria-label="复制链接">⧉ 复制</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="rsn-focus__side">
+          <article class="rsn-mini">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23241b12'/%3E%3Cg fill='%23ffb03a' opacity='.9'%3E%3Ccircle cx='90' cy='80' r='40'/%3E%3C/g%3E%3Cg fill='%23ff5c39' opacity='.6'%3E%3Crect x='190' y='50' width='150' height='110' rx='10'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.8'%3E%3Crect x='40' y='160' width='120' height='8' rx='4'/%3E%3Crect x='40' y='180' width='80' height='8' rx='4' opacity='.5'/%3E%3C/g%3E%3C/svg%3E" alt="手作人访谈短片封面：暖橙色工作灯与木作台">
+            <div class="rsn-mini__body">
+              <p class="rsn-mini__title">人物访谈：做了 22 年木工的阿昌，为什么坚持不接急单</p>
+              <p class="rsn-mini__meta">人物访谈 · 18:12 · 3.2 万次播放</p>
+            </div>
+          </article>
+          <article class="rsn-mini">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%230e2a24'/%3E%3Cg stroke='%233ee0a1' stroke-opacity='.55' fill='none' stroke-width='3'%3E%3Cpath d='M0 180 Q100 120 200 170 T400 140'/%3E%3C/g%3E%3Cg fill='%233ee0a1' opacity='.75'%3E%3Ccircle cx='300' cy='70' r='26'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.85'%3E%3Crect x='36' y='40' width='150' height='9' rx='4.5'/%3E%3Crect x='36' y='62' width='96' height='9' rx='4.5' opacity='.5'/%3E%3C/g%3E%3C/svg%3E" alt="户外记录短片封面：绿色山脊线与日光">
+            <div class="rsn-mini__body">
+              <p class="rsn-mini__title">徒步 38 公里后，我们把镜头交给了山风</p>
+              <p class="rsn-mini__meta">户外活动 · 12:41 · 2.7 万次播放</p>
+            </div>
+          </article>
+          <article class="rsn-mini">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%231a1426'/%3E%3Cg fill='%23c39bff' opacity='.7'%3E%3Crect x='60' y='60' width='70' height='70' rx='8'/%3E%3Crect x='150' y='90' width='70' height='70' rx='8'/%3E%3Crect x='240' y='50' width='70' height='70' rx='8'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.8'%3E%3Crect x='60' y='160' width='140' height='9' rx='4.5'/%3E%3C/g%3E%3C/svg%3E" alt="剪辑教程封面：粉紫色时间轴与素材块">
+            <div class="rsn-mini__body">
+              <p class="rsn-mini__title">教程干货：用三条时间轴，把旅行素材剪出电影感</p>
+              <p class="rsn-mini__meta">教程干货 · 21:05 · 4.1 万次播放</p>
+            </div>
+          </article>
+          <article class="rsn-mini">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%230d1420'/%3E%3Cg fill='%23ff8a3d' opacity='.85'%3E%3Ccircle cx='320' cy='60' r='34'/%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-opacity='.4' stroke-width='2' fill='none'%3E%3Cpath d='M40 170 L120 130 L200 160 L280 120 L360 150'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.8'%3E%3Crect x='40' y='45' width='130' height='9' rx='4.5'/%3E%3Crect x='40' y='68' width='80' height='9' rx='4.5' opacity='.5'/%3E%3C/g%3E%3C/svg%3E" alt="行业观察短片封面：深蓝背景上的数据折线">
+            <div class="rsn-mini__body">
+              <p class="rsn-mini__title">行业观察：短视频时代，长内容为什么还值得做</p>
+              <p class="rsn-mini__meta">行业观察 · 16:30 · 2.1 万次播放</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门视频流 -->
+  <section class="rsn-section rsn-section--tight" id="rsnFlow">
+    <div class="rsn-wrap">
+      <div class="rsn-sec-head">
+        <div>
+          <div class="rsn-eyebrow">COMMUNITY FLOW</div>
+          <h2 class="rsn-h2">社区热门 · <em>持续更新</em>的精选影像</h2>
+          <p class="rsn-lead">来自 r星精选创作者社区的真实作品，涵盖日常记录、实用技巧、治愈影像与文化访谈。</p>
+        </div>
+        <div class="rsn-about__tags" style="margin:0">
+          <span class="rsn-tag rsn-tag--hot">全部</span>
+          <span class="rsn-tag">日常记录</span>
+          <span class="rsn-tag">实用技巧</span>
+          <span class="rsn-tag">治愈影像</span>
+        </div>
+      </div>
+
+      <div class="rsn-flow">
+        <article class="rsn-card">
+          <div class="rsn-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23122a3a'/%3E%3Cg fill='%235fd2ff' opacity='.35'%3E%3Ccircle cx='90' cy='150' r='60'/%3E%3Ccircle cx='300' cy='70' r='45'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.9'%3E%3Crect x='34' y='40' width='150' height='9' rx='4.5'/%3E%3Crect x='34' y='62' width='90' height='9' rx='4.5' opacity='.5'/%3E%3C/g%3E%3Cg fill='%23ff5c39'%3E%3Crect x='34' y='170' width='52' height='20' rx='10'/%3E%3C/g%3E%3C/svg%3E" alt="城市探索短片封面：蓝色水域与街灯">
+            <span class="rsn-cover__mask"></span>
+            <span class="rsn-cover__label">城市探索</span>
+            <span class="rsn-cover__time">09:48</span>
+          </div>
+          <div class="rsn-card__body">
+            <h3 class="rsn-card__title">沿着老铁路走 12 公里，我拍到了三座被遗忘的桥</h3>
+            <p class="rsn-card__desc">一条废弃支线，三段不同年代的桥。用脚步丈量城市边缘，也用镜头记住它们。</p>
+            <div class="rsn-card__foot">
+              <span class="rsn-card__author"><span class="rsn-avatar" style="background:linear-gradient(135deg,#5fd2ff,#3ee0a1)">野</span>野径阿默</span>
+              <div class="rsn-tools">
+                <button class="rsn-icon-btn" data-role="like" data-count="986" aria-label="点赞">♥ <span>986</span></button>
+                <button class="rsn-icon-btn" data-role="fav" aria-label="收藏">☆</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="rsn-card">
+          <div class="rsn-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23241a10'/%3E%3Cg fill='%23ffcf7a' opacity='.8'%3E%3Ccircle cx='120' cy='110' r='46'/%3E%3C/g%3E%3Cg fill='%23a8673b' opacity='.9'%3E%3Crect x='200' y='60' width='150' height='110' rx='12'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.85'%3E%3Crect x='36' y='170' width='130' height='9' rx='4.5'/%3E%3Crect x='36' y='192' width='80' height='9' rx='4.5' opacity='.5'/%3E%3C/g%3E%3C/svg%3E" alt="美食烹饪短片封面：暖光下的手冲咖啡与器物">
+            <span class="rsn-cover__mask"></span>
+            <span class="rsn-cover__label">日常记录</span>
+            <span class="rsn-cover__time">07:22</span>
+          </div>
+          <div class="rsn-card__body">
+            <h3 class="rsn-card__title">一个人住的第七年，我把早餐做成了一件正经事</h3>
+            <p class="rsn-card__desc">从烤面包到煎蛋，十五分钟的生活仪式感。记录比配方更重要的部分。</p>
+            <div class="rsn-card__foot">
+              <span class="rsn-card__author"><span class="rsn-avatar" style="background:linear-gradient(135deg,#ffcf7a,#ff8a3d)">柚</span>柚子小厨房</span>
+              <div class="rsn-tools">
+                <button class="rsn-icon-btn" data-role="like" data-count="1452" aria-label="点赞">♥ <span>1452</span></button>
+                <button class="rsn-icon-btn" data-role="fav" aria-label="收藏">☆</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="rsn-card">
+          <div class="rsn-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%231b1533'/%3E%3Cg stroke='%23c39bff' stroke-width='3' fill='none' opacity='.7'%3E%3Ccircle cx='120' cy='110' r='40'/%3E%3Ccircle cx='200' cy='110' r='40'/%3E%3Ccircle cx='280' cy='110' r='40'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.85'%3E%3Crect x='36' y='182' width='150' height='9' rx='4.5'/%3E%3C/g%3E%3C/svg%3E" alt="知识科普短片封面：紫色几何图形与讲解结构">
+            <span class="rsn-cover__mask"></span>
+            <span class="rsn-cover__label">知识科普</span>
+            <span class="rsn-cover__time">14:05</span>
+          </div>
+          <div class="rsn-card__body">
+            <h3 class="rsn-card__title">为什么我们会对一支短片念念不忘？聊聊影像的记忆结构</h3>
+            <p class="rsn-card__desc">从叙事节奏到声音设计，用三个经典片段拆解「被记住」的秘密。</p>
+            <div class="rsn-card__foot">
+              <span class="rsn-card__author"><span class="rsn-avatar" style="background:linear-gradient(135deg,#c39bff,#6f7dff)">影</span>影像笔记所</span>
+              <div class="rsn-tools">
+                <button class="rsn-icon-btn" data-role="like" data-count="743" aria-label="点赞">♥ <span>743</span></button>
+                <button class="rsn-icon-btn" data-role="fav" aria-label="收藏">☆</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="rsn-card">
+          <div class="rsn-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%230f2b22'/%3E%3Cg fill='%233ee0a1' opacity='.55'%3E%3Crect x='50' y='60' width='60' height='60' rx='6'/%3E%3Crect x='130' y='90' width='60' height='60' rx='6'/%3E%3Crect x='210' y='50' width='60' height='60' rx='6'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.85'%3E%3Crect x='50' y='170' width='130' height='9' rx='4.5'/%3E%3Crect x='50' y='192' width='90' height='9' rx='4.5' opacity='.5'/%3E%3C/g%3E%3C/svg%3E" alt="手作DIY短片封面：绿色工作台上的材料方格">
+            <span class="rsn-cover__mask"></span>
+            <span class="rsn-cover__label">手作DIY</span>
+            <span class="rsn-cover__time">11:33</span>
+          </div>
+          <div class="rsn-card__body">
+            <h3 class="rsn-card__title">用废弃木板做一盏灯：从量尺到打磨的完整过程</h3>
+            <p class="rsn-card__desc">工具简单、成本不高，重点在细节。附上尺寸表与常见翻车点提示。</p>
+            <div class="rsn-card__foot">
+              <span class="rsn-card__author"><span class="rsn-avatar" style="background:linear-gradient(135deg,#3ee0a1,#a8f0c6)">木</span>木作小院</span>
+              <div class="rsn-tools">
+                <button class="rsn-icon-btn" data-role="like" data-count="612" aria-label="点赞">♥ <span>612</span></button>
+                <button class="rsn-icon-btn" data-role="fav" aria-label="收藏">☆</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="rsn-card">
+          <div class="rsn-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%231d2233'/%3E%3Cg fill='%23ff5c39' opacity='.8'%3E%3Cpath d='M0 190 Q100 140 200 180 T400 150 V225 H0 Z'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.85'%3E%3Crect x='36' y='44' width='170' height='9' rx='4.5'/%3E%3Crect x='36' y='66' width='100' height='9' rx='4.5' opacity='.5'/%3E%3C/g%3E%3Ccircle cx='320' cy='70' r='28' fill='%23ffe9a8' opacity='.9'/%3E%3C/svg%3E" alt="音乐现场短片封面：橙红色声波与舞台光点">
+            <span class="rsn-cover__mask"></span>
+            <span class="rsn-cover__label">音乐现场</span>
+            <span class="rsn-cover__time">06:19</span>
+          </div>
+          <div class="rsn-card__body">
+            <h3 class="rsn-card__title">在天台弹完最后一首歌，我们把这场小型演出送给你</h3>
+            <p class="rsn-card__desc">没有舞台灯，只有城市霓虹。四个人的乐队，一段即兴的现场记录。</p>
+            <div class="rsn-card__foot">
+              <span class="rsn-card__author"><span class="rsn-avatar" style="background:linear-gradient(135deg,#ff8a3d,#ff5c39)">天</span>天台乐队</span>
+              <div class="rsn-tools">
+                <button class="rsn-icon-btn" data-role="like" data-count="1108" aria-label="点赞">♥ <span>1108</span></button>
+                <button class="rsn-icon-btn" data-role="fav" aria-label="收藏">☆</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="rsn-card">
+          <div class="rsn-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%2315202e'/%3E%3Cg fill='%236fd0ff' opacity='.5'%3E%3Crect x='40' y='30' width='320' height='120' rx='10'/%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-opacity='.6' stroke-width='3' fill='none'%3E%3Crect x='90' y='60' width='220' height='60' rx='8'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.85'%3E%3Crect x='40' y='176' width='150' height='9' rx='4.5'/%3E%3Crect x='40' y='198' width='90' height='9' rx='4.5' opacity='.5'/%3E%3C/g%3E%3C/svg%3E" alt="深度测评短片封面：蓝色屏幕与参数对比框">
+            <span class="rsn-cover__mask"></span>
+            <span class="rsn-cover__label">深度测评</span>
+            <span class="rsn-cover__time">17:44</span>
+          </div>
+          <div class="rsn-card__body">
+            <h3 class="rsn-card__title">三台入门相机实拍对比：拍视频的人到底该看哪些参数</h3>
+            <p class="rsn-card__desc">同场景、同参数、同后期。把玄学参数拉回真实拍摄体验。</p>
+            <div class="rsn-card__foot">
+              <span class="rsn-card__author"><span class="rsn-avatar" style="background:linear-gradient(135deg,#6fd0ff,#5f7dff)">镜</span>镜头之外</span>
+              <div class="rsn-tools">
+                <button class="rsn-icon-btn" data-role="like" data-count="532" aria-label="点赞">♥ <span>532</span></button>
+                <button class="rsn-icon-btn" data-role="fav" aria-label="收藏">☆</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题 -->
+  <section class="rsn-section" id="rsnTopics">
+    <div class="rsn-wrap">
+      <div class="rsn-sec-head">
+        <div>
+          <div class="rsn-eyebrow">ORIGINAL SERIES</div>
+          <h2 class="rsn-h2">原创专题 · <em>值得追更</em>的系列企划</h2>
+          <p class="rsn-lead">r星精选官方自制与联合出品，以系列化方式叙述人与城市、手艺与生活的关系。</p>
+        </div>
+      </div>
+      <div class="rsn-topics">
+        <article class="rsn-topic">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%230d1b2b'/%3E%3Cg fill='%233ee0a1' opacity='.35'%3E%3Crect x='0' y='200' width='400' height='100'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.7'%3E%3Crect x='0' y='120' width='40' height='80'/%3E%3Crect x='55' y='90' width='34' height='110'/%3E%3Crect x='104' y='140' width='44' height='60'/%3E%3Crect x='163' y='70' width='30' height='130'/%3E%3Crect x='208' y='120' width='46' height='80'/%3E%3Crect x='268' y='100' width='34' height='100'/%3E%3Crect x='316' y='150' width='60' height='50'/%3E%3C/g%3E%3C/svg%3E" alt="专题《一城一镜》封面：深色城市天际线与绿色江面">
+          <h3>一城一镜</h3>
+          <p>每集走进一座城市的一个切面，用纪录片的方式记录地方劳动、饮食与街巷。</p>
+          <span class="rsn-topic__status"><i class="rsn-dot"></i>更新至 第 6 季 · 共 34 集</span>
+        </article>
+
+        <article class="rsn-topic">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23201510'/%3E%3Cg fill='%23ffb03a' opacity='.75'%3E%3Ccircle cx='310' cy='80' r='44'/%3E%3C/g%3E%3Cg fill='%23a8673b'%3E%3Crect x='40' y='140' width='320' height='120' rx='8'/%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-opacity='.5' stroke-width='3'%3E%3Cpath d='M40 140 L200 60 L360 140'/%3E%3C/g%3E%3C/svg%3E" alt="专题《手上有光》封面：暖色木工房与屋顶轮廓">
+          <h3>手上有光</h3>
+          <p>聚焦手艺人与小微企业主，记录他们在机器时代仍坚持手工的理由与日常。</p>
+          <span class="rsn-topic__status"><i class="rsn-dot"></i>更新至 第 2 季 · 共 16 集</span>
+        </article>
+
+        <article class="rsn-topic">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23151a30'/%3E%3Cg fill='%23c39bff' opacity='.6'%3E%3Ccircle cx='90' cy='90' r='40'/%3E%3Ccircle cx='200' cy='120' r='52'/%3E%3Ccircle cx='310' cy='80' r='36'/%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-opacity='.4' stroke-width='2' fill='none'%3E%3Cpath d='M0 230 Q200 170 400 220'/%3E%3C/g%3E%3C/svg%3E" alt="专题《提问者》封面：紫色圆形人物剪影与弧线">
+          <h3>提问者</h3>
+          <p>与作家、工程师、教师、医生对话，讨论那些没有标准答案却值得追问的问题。</p>
+          <span class="rsn-topic__status"><i class="rsn-dot"></i>更新至 第 1 季 · 共 9 集</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者 -->
+  <section class="rsn-section rsn-section--tight" id="rsnCreators">
+    <div class="rsn-wrap">
+      <div class="rsn-sec-head">
+        <div>
+          <div class="rsn-eyebrow">CREATORS</div>
+          <h2 class="rsn-h2">创作者矩阵 · <em>社区的中坚力量</em></h2>
+          <p class="rsn-lead">他们来自不同行业与城市，用稳定的更新与真诚的表达，构成 r星精选的内容生态底色。</p>
+        </div>
+      </div>
+      <div class="rsn-creators">
+        <article class="rsn-creator">
+          <div class="rsn-creator__avatar" style="background:linear-gradient(135deg,#5fd2ff,#3ee0a1)">野</div>
+          <h3 class="rsn-creator__name">野径阿默</h3>
+          <p class="rsn-creator__field">城市探索 · 户外记录</p>
+          <p class="rsn-creator__bio">前地图测绘员，喜欢用步行理解一座城。坚持每周更新一条城市边缘影像。</p>
+          <div class="rsn-creator__nums"><span>作品 <b>128</b></span><span>粉丝 <b>8.6万</b></span></div>
+        </article>
+
+        <article class="rsn-creator">
+          <div class="rsn-creator__avatar" style="background:linear-gradient(135deg,#ffcf7a,#ff8a3d)">柚</div>
+          <h3 class="rsn-creator__name">柚子小厨房</h3>
+          <p class="rsn-creator__field">美食烹饪 · 日常记录</p>
+          <p class="rsn-creator__bio">一个人住，认真吃饭。把家常菜、厨房收纳与生活节奏拍成可复用的日常。</p>
+          <div class="rsn-creator__nums"><span>作品 <b>214</b></span><span>粉丝 <b>12.3万</b></span></div>
+        </article>
+
+        <article class="rsn-creator">
+          <div class="rsn-creator__avatar" style="background:linear-gradient(135deg,#c39bff,#6f7dff)">影</div>
+          <h3 class="rsn-creator__name">影像笔记所</h3>
+          <p class="rsn-creator__field">知识科普 · 教程干货</p>
+          <p class="rsn-creator__bio">影视专业教师，擅长把复杂的镜头语言拆成普通人能听懂的语言。</p>
+          <div class="rsn-creator__nums"><span>作品 <b>96</b></span><span>粉丝 <b>6.8万</b></span></div>
+        </article>
+
+        <article class="rsn-creator">
+          <div class="rsn-creator__avatar" style="background:linear-gradient(135deg,#3ee0a1,#a8f0c6)">木</div>
+          <h3 class="rsn-creator__name">木作小院</h3>
+          <p class="rsn-creator__field">手作DIY · 家居收纳</p>
+          <p class="rsn-creator__bio">在城郊经营一间小木工房，拍下从设计到成品的全过程，也乐意分享失败经验。</p>
+          <div class="rsn-creator__nums"><span>作品 <b>77</b></span><span>粉丝 <b>4.2万</b></span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 榜单 -->
+  <section class="rsn-section" id="rsnRank">
+    <div class="rsn-wrap">
+      <div class="rsn-sec-head">
+        <div>
+          <div class="rsn-eyebrow">CHARTS</div>
+          <h2 class="rsn-h2">数据榜单 · 本周<em>口碑与热度</em></h2>
+          <p class="rsn-lead">榜单由播放完成度、互动质量与社区投票综合计算，每周一更新，用于帮助观众发现精品内容。</p>
+        </div>
+      </div>
+      <div class="rsn-rank">
+        <div class="rsn-rank__box">
+          <h3>热度榜 <span>WEEKLY</span></h3>
+          <div class="rsn-rank__item"><span class="rsn-rank__no">1</span><span class="rsn-rank__name">《一城一镜》第六季 01：凌晨四点的水产市场</span><span class="rsn-rank__val">32.1万</span></div>
+          <div class="rsn-rank__item"><span class="rsn-rank__no">2</span><span class="rsn-rank__name">一个人住的第七年，我把早餐做成了一件正经事</span><span class="rsn-rank__val">27.4万</span></div>
+          <div class="rsn-rank__item"><span class="rsn-rank__no">3</span><span class="rsn-rank__name">沿着老铁路走 12 公里，我拍到了三座被遗忘的桥</span><span class="rsn-rank__val">21.8万</span></div>
+          <div class="rsn-rank__item"><span class="rsn-rank__no">4</span><span class="rsn-rank__name">在天台弹完最后一首歌，我们把这场小型演出送给你</span><span class="rsn-rank__val">18.6万</span></div>
+        </div>
+        <div class="rsn-rank__box">
+          <h3>口碑榜 <span>CURATED</span></h3>
+          <div class="rsn-rank__item"><span class="rsn-rank__no">1</span><span class="rsn-rank__name">人物访谈：做了 22 年木工的阿昌</span><span class="rsn-rank__val">好评 98%</span></div>
+          <div class="rsn-rank__item"><span class="rsn-rank__no">2</span><span class="rsn-rank__name">为什么我们会对一支短片念念不忘</span><span class="rsn-rank__val">好评 96%</span></div>
+          <div class="rsn-rank__item"><span class="rsn-rank__no">3</span><span class="rsn-rank__name">用废弃木板做一盏灯：完整制作过程</span><span class="rsn-rank__val">好评 95%</span></div>
+          <div class="rsn-rank__item"><span class="rsn-rank__no">4</span><span class="rsn-rank__name">三台入门相机实拍对比</span><span class="rsn-rank__val">好评 93%</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评价 -->
+  <section class="rsn-section rsn-section--tight" id="rsnReviews">
+    <div class="rsn-wrap">
+      <div class="rsn-sec-head">
+        <div>
+          <div class="rsn-eyebrow">VOICES</div>
+          <h2 class="rsn-h2">观众与创作者<em>怎么说</em></h2>
+        </div>
+      </div>
+      <div class="rsn-reviews">
+        <div class="rsn-review">
+          <p>在这儿看了半年多，最大的感受是「不用挑」。首页推荐不会塞一堆重复的东西，点进去的画质和内容完成度都挺稳。</p>
+          <div class="rsn-review__who"><span class="rsn-avatar" style="background:linear-gradient(135deg,#5fd2ff,#6f7dff)">林</span>林间有风 · 观众</div>
+        </div>
+        <div class="rsn-review">
+          <p>作为小创作者，投稿流程比我预想的清楚。审核意见写得很具体，不是那种敷衍的模板回复，这点挺难得。</p>
+          <div class="rsn-review__who"><span class="rsn-avatar" style="background:linear-gradient(135deg,#3ee0a1,#a8f0c6)">半</span>半山腰的猫 · 创作者</div>
+        </div>
+        <div class="rsn-review">
+          <p>《手上有光》那几集我反复看了两遍。木头、铁、布，都是普通材料，但拍出了人身上的劲儿。</p>
+          <div class="rsn-review__who"><span class="rsn-avatar" style="background:linear-gradient(135deg,#ffcf7a,#ff8a3d)">苏</span>苏打水加冰 · 观众</div>
+        </div>
+        <div class="rsn-review">
+          <p>教程类内容很实用，剪辑那期给的节奏表我直接拿来用了，效率提升明显。希望多出一些幕后拆解。</p>
+          <div class="rsn-review__who"><span class="rsn-avatar" style="background:linear-gradient(135deg,#c39bff,#6f7dff)">阿</span>阿泽剪片 · 创作者</div>
+        </div>
+        <div class="rsn-review">
+          <p>城市系列让我重新认识了自己住了十几年的地方。周末照着片里的路线走了一趟，很有意思。</p>
+          <div class="rsn-review__who"><span class="rsn-avatar" style="background:linear-gradient(135deg,#ff8a3d,#ff5c39)">小</span>小巷口 · 观众</div>
+        </div>
+        <div class="rsn-review">
+          <p>版权说明和授权范围写得清楚，这对我们做商业合作的人来说很重要，沟通成本低了不少。</p>
+          <div class="rsn-review__who"><span class="rsn-avatar" style="background:linear-gradient(135deg,#6fd0ff,#3ee0a1)">品</span>品牌合作方 · 企业用户</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 灵感工具 -->
+  <section class="rsn-section" id="rsnIdeas">
+    <div class="rsn-wrap">
+      <div class="rsn-sec-head">
+        <div>
+          <div class="rsn-eyebrow">CREATIVE LAB</div>
+          <h2 class="rsn-h2">创作灵感 · <em>给选题一点方向</em></h2>
+          <p class="rsn-lead">输入你正在拍摄的主题，获取一条可执行的脚本方向。工具仅作启发，最终表达仍属于创作者本人。</p>
+        </div>
+      </div>
+      <div class="rsn-ideas">
+        <div class="rsn-idea-form">
+          <label for="rsnIdeaInput">你的拍摄主题</label>
+          <input id="rsnIdeaInput" type="text" placeholder="例如：菜市场、夜班、老手艺、通勤" maxlength="20">
+          <button type="button" class="rsn-btn rsn-btn--primary" id="rsnIdeaBtn" style="width:100%;justify-content:center">生成灵感方向</button>
+          <p style="font-size:12.5px;color:var(--rsn-sub);margin:12px 0 0">提示：越具体的主题，得到的方向越贴近可拍性。</p>
+        </div>
+        <div class="rsn-idea-result" id="rsnIdeaResult">
+          <div class="rsn-idea-item"><b>开场建议</b>：用一个固定机位拍 10 秒环境声，再切到人物手部特写，先给气氛再给信息。</div>
+          <div class="rsn-idea-item"><b>结构建议</b>：人物—动作—细节—回望，四段式最容易在 8 分钟内讲完整。</div>
+          <div class="rsn-idea-item"><b>标题建议</b>：把时间、地点、动作放进标题，例如「凌晨四点，我在××做××」。</div>
+          <div class="rsn-idea-item"><b>剪辑思路</b>：保留两处呼吸感的长镜头，其余用动作衔接，避免音乐全程覆盖。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 -->
+  <section class="rsn-section rsn-section--tight" id="rsnNews">
+    <div class="rsn-wrap">
+      <div class="rsn-sec-head">
+        <div>
+          <div class="rsn-eyebrow">NEWSROOM</div>
+          <h2 class="rsn-h2">企业动态 · <em>官方发布</em>与更新日志</h2>
+        </div>
+      </div>
+      <div class="rsn-news">
+        <div class="rsn-news__item"><span class="rsn-news__date">2026.11.18</span><span class="rsn-news__title">「街头一分钟」短片挑战正式开启报名，设生活、城市、人物三个赛道</span><span class="rsn-news__tag">比赛报名</span></div>
+        <div class="rsn-news__item"><span class="rsn-news__date">2026.11.12</span><span class="rsn-news__title">r星精选与三家独立影像机构达成内容合作，新增 40 部授权作品</span><span class="rsn-news__tag">合作</span></div>
+        <div class="rsn-news__item"><span class="rsn-news__date">2026.11.05</span><span class="rsn-news__title">官方网站上传通道升级：支持分段续传与素材版本管理</span><span class="rsn-news__tag">产品更新</span></div>
+        <div class="rsn-news__item"><span class="rsn-news__date">2026.10.27</span><span class="rsn-news__title">《一城一镜》第六季上线，首周社区投票参与人数突破 2 万</span><span class="rsn-news__tag">内容上新</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="rsn-section" id="rsnFaq">
+    <div class="rsn-wrap">
+      <div class="rsn-sec-head" style="justify-content:center;text-align:center">
+        <div>
+          <div class="rsn-eyebrow">HELP CENTER</div>
+          <h2 class="rsn-h2">常见问题</h2>
+          <p class="rsn-lead" style="margin:0 auto">关于内容、投稿、版权与合作的常见疑问，都可以在这里先找到答案。</p>
+        </div>
+      </div>
+      <div class="rsn-faq">
+        <details open>
+          <summary>r星精选的内容从哪里来？</summary>
+          <p>页面内容由三部分组成：官方自制专题、签约创作者原创作品、以及社区用户投稿。所有进入首页与专区的内容均经过编辑审核与版权确认。</p>
+        </details>
+        <details>
+          <summary>如何向 r星精选投稿？</summary>
+          <p>可通过页面底部「联系与投稿」入口提交作品信息，包括标题、时长、简介与素材链接。审核周期通常为 5 至 7 个工作日，结果会以邮件反馈。</p>
+        </details>
+        <details>
+          <summary>作品版权归谁所有？</summary>
+          <p>作品版权始终归创作者本人所有。平台仅获得在约定范围内展示与推广的授权，商业使用需另行签署协议，具体条款在投稿确认时明确说明。</p>
+        </details>
+        <details>
+          <summary>平台对画质有要求吗？</summary>
+          <p>建议提交 1080P 及以上分辨率的成片，帧率与码率不作硬性限制，但需保证画面无明显压缩伪影。音频建议独立轨道，便于后续处理。</p>
+        </details>
+        <details>
+          <summary>能否与 r星精选进行品牌合作？</summary>
+          <p>可以。我们欢迎与关注内容品质的品牌共同策划系列内容或专题共创。请在联系时说明合作方向、周期与预算范围，我们会安排对应负责人对接。</p>
+        </details>
+        <details>
+          <summary>「街头一分钟」挑战如何报名？</summary>
+          <p>在企业动态中找到挑战公告，填写报名表并上传一支时长不超过 60 秒的作品即可。三个赛道可任选其一，报名截止后进入社区投票与编辑评审环节。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section class="rsn-section rsn-section--tight" id="rsnContact">
+    <div class="rsn-wrap">
+      <div class="rsn-sec-head">
+        <div>
+          <div class="rsn-eyebrow">CONTACT</div>
+          <h2 class="rsn-h2">联系与投稿</h2>
+          <p class="rsn-lead">无论是作品投递、内容合作还是使用反馈，我们都愿意认真读完。</p>
+        </div>
+      </div>
+      <div class="rsn-contact">
+        <div class="rsn-contact__info">
+          <div class="rsn-contact__row"><b>商务合作</b><span>brand@rstarselect.example</span></div>
+          <div class="rsn-contact__row"><b>作品投稿</b><span>submit@rstarselect.example</span></div>
+          <div class="rsn-contact__row"><b>媒体联络</b><span>press@rstarselect.example</span></div>
+          <div class="rsn-contact__row"><b>工作时间</b><span>周一至周五 10:00 - 19:00</span></div>
+          <div class="rsn-contact__row"><b>办公地址</b><span>城市影像园区 B 座 3 层 · 内容运营中心</span></div>
+          <p style="font-size:13px;color:var(--rsn-sub);margin-top:14px;margin-bottom:0">我们承诺在 3 个工作日内回复有效来信，感谢你的耐心与信任。</p>
+        </div>
+        <div class="rsn-idea-form">
+          <label for="rsnFormName">你的称呼</label>
+          <input id="rsnFormName" type="text" placeholder="怎么称呼你" maxlength="20">
+          <label for="rsnFormMsg">想说的话</label>
+          <input id="rsnFormMsg" type="text" placeholder="投稿 / 合作 / 建议，简单说明即可" maxlength="60">
+          <button type="button" class="rsn-btn rsn-btn--primary" id="rsnSubmitBtn" style="width:100%;justify-content:center">提交信息</button>
+          <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap">
+            <button type="button" class="rsn-btn rsn-btn--ghost rsn-btn--sm" id="rsnShareBtn">分享给朋友</button>
+            <button type="button" class="rsn-btn rsn-btn--ghost rsn-btn--sm" id="rsnReportBtn">内容反馈</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rsn-footer">
+  <div class="rsn-wrap">
+    <div class="rsn-footer__grid">
+      <div>
+        <h4>r星精选 · 官方网站</h4>
+        <p>专注原创高清影像的品牌内容平台，深耕城市记录、人物访谈、实用教程与艺术表达，与创作者共同构建值得信赖的内容生态。</p>
+        <p style="color:#5f6b84">持续运营中 · 用户至上 · 尊重创作</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <a href="#rsnFocus">焦点影像</a>
+        <a href="#rsnFlow">社区热门</a>
+        <a href="#rsnTopics">原创专题</a>
+        <a href="#rsnRank">数据榜单</a>
+      </div>
+      <div>
+        <h4>关于我们</h4>
+        <a href="#rsnAbout">品牌故事</a>
+        <a href="#rsnCreators">创作者矩阵</a>
+        <a href="#rsnNews">企业动态</a>
+        <a href="#rsnFaq">帮助中心</a>
+      </div>
+      <div>
+        <h4>参与共建</h4>
+        <a href="#rsnContact">作品投稿</a>
+        <a href="#rsnIdeas">创作灵感</a>
+        <a href="#rsnContact">品牌合作</a>
+        <a href="#rsnReviews">观众反馈</a>
+      </div>
+    </div>
+    <div class="rsn-footer__bottom">
+      <span>© 2026 r星精选 R·STAR SELECT · 版权所有 · 官方网站</span>
+      <span>内容均为原创或经授权发布 · 请尊重创作者权益</span>
+    </div>
+  </div>
+</footer>
+
+<button class="rsn-top-btn" id="rsnTopBtn" aria-label="回到顶部">↑</button>
+
+<div class="rsn-modal" id="rsnModal" role="dialog" aria-modal="true" aria-labelledby="rsnModalTitle">
+  <div class="rsn-modal__box">
+    <button class="rsn-modal__close" id="rsnModalClose" aria-label="关闭弹窗">×</button>
+    <h3 id="rsnModalTitle">提示</h3>
+    <div id="rsnModalBody"></div>
+  </div>
+</div>
+
+<div class="rsn-toast" id="rsnToast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 吸顶高度同步，保证锚点偏移 */
+  function syncStickyHeight(){
+    var el = document.getElementById('rsnTop');
+    if(!el) return;
+    document.documentElement.style.setProperty('--rsn-top', el.offsetHeight + 'px');
+  }
+  window.addEventListener('resize', syncStickyHeight);
+  window.addEventListener('load', syncStickyHeight);
+  syncStickyHeight();
+
+  /* 移动端导航 */
+  var navToggle = document.getElementById('rsnNavToggle');
+  var nav = document.getElementById('rsnNav');
+  if(navToggle && nav){
+    navToggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('rsn-open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      syncStickyHeight();
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 760){
+        nav.classList.remove('rsn-open');
+        navToggle.setAttribute('aria-expanded','false');
+        syncStickyHeight();
+      }
+    });
+  }
+
+  /* Toast */
+  var toast = document.getElementById('rsnToast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('rsn-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('rsn-show'); }, 2200);
+  }
+
+  /* 弹窗 */
+  var modal = document.getElementById('rsnModal');
+  var modalTitle = document.getElementById('rsnModalTitle');
+  var modalBody = document.getElementById('rsnModalBody');
+  var modalClose = document.getElementById('rsnModalClose');
+  function openModal(title, html){
+    modalTitle.textContent = title;
+    modalBody.innerHTML = html;
+    modal.classList.add('rsn-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    modal.classList.remove('rsn-open');
+    document.body.style.overflow = '';
+  }
+  if(modalClose){ modalClose.addEventListener('click', closeModal); }
+  if(modal){ modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); }); }
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && modal.classList.contains('rsn-open')) closeModal(); });
+
+  /* 搜索 */
+  var searchInput = document.getElementById('rsnSearchInput');
+  var searchBtn = document.getElementById('rsnSearchBtn');
+  var searchHint = document.getElementById('rsnSearchHint');
+  var hintTimer = null;
+  function doSearch(){
+    var kw = (searchInput.value || '').trim();
+    if(!kw){
+      searchHint.textContent = '请输入关键词，例如「城市」「手作」「教程」。';
+    }else{
+      searchHint.textContent = '正在为你检索「' + kw + '」相关影像与创作者…（演示反馈）';
+      setTimeout(function(){
+        showToast('已根据「' + kw + '」整理出 6 条相关内容');
+        var flow = document.getElementById('rsnFlow');
+        if(flow) flow.scrollIntoView({behavior:'smooth', block:'start'});
+      }, 600);
+    }
+    searchHint.classList.add('rsn-open');
+    clearTimeout(hintTimer);
+    hintTimer = setTimeout(function(){ searchHint.classList.remove('rsn-open'); }, 4200);
+    syncStickyHeight();
+  }
+  if(searchBtn){ searchBtn.addEventListener('click', doSearch); }
+  if(searchInput){
+    searchInput.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); doSearch(); } });
+  }
+
+  /* 点赞 / 收藏 / 复制 */
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest ? e.target.closest('.rsn-icon-btn') : null;
+    if(!btn) return;
+    var role = btn.getAttribute('data-role');
+
+    if(role === 'like'){
+      var numEl = btn.querySelector('span');
+      var base = parseInt(btn.getAttribute('data-count') || (numEl ? numEl.textContent : '0'), 10) || 0;
+      var liked = btn.classList.toggle('rsn-on');
+      var next = liked ? base + 1 : base;
+      if(liked) btn.setAttribute('data-count', String(next));
+      else btn.setAttribute('data-count', String(base));
+      if(numEl) numEl.textContent = liked ? String(next) : String(base);
+      if(liked) showToast('已点赞，感谢你的支持');
+      return;
+    }
+
+    if(role === 'fav'){
+      var on = btn.classList.toggle('rsn-on');
+      btn.innerHTML = on ? '★ 已收藏' : '☆ 收藏';
+      showToast(on ? '已加入收藏夹' : '已取消收藏');
+      return;
+    }
+
+    if(role === 'copy'){
+      var text = 'r星精选 · 官方网站精选影像：' + (document.querySelector('.rsn-card__title') ? document.querySelector('.rsn-card__title').textContent : '原创影像内容');
+      function done(){ showToast('链接已复制，可分享给朋友'); }
+      function fallback(){
+        try{
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+          done();
+        }catch(err){
+          showToast('当前环境不支持自动复制');
+        }
+      }
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(done).catch(fallback);
+      }else{
+        fallback();
+      }
+      return;
+    }
+  });
+
+  /* 分享 */
+  function sharePage(){
+    var shareText = 'r星精选官方网站：精选原创影像，记录真实与温度。';
+    if(navigator.share){
+      navigator.share({title:'r星精选', text:shareText}).catch(function(){});
+      return;
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(shareText).then(function(){
+        showToast('分享文案已复制，去粘贴给朋友吧');
+      }).catch(function(){
+        showToast('可分享至微信、微博或 QQ');
+      });
+    }else{
+      showToast('可分享至微信、微博或 QQ');
+    }
+  }
+  var shareHero = document.getElementById('rsnShareHero');
+  var shareBtn = document.getElementById('rsnShareBtn');
+  if(shareHero) shareHero.addEventListener('click', sharePage);
+  if(shareBtn) shareBtn.addEventListener('click', sharePage);
+
+  /* 反馈 */
+  var reportBtn = document.getElementById('rsnReportBtn');
+  if(reportBtn){
+    reportBtn.addEventListener('click', function(){
+      openModal('内容反馈',
+        '<p>如果发现内容描述错误、版权疑问或使用问题，欢迎告知我们。</p>' +
+        '<p style="margin-top:12px">反馈邮箱：feedback@rstarselect.example</p>' +
+        '<p>我们会在 3 个工作日内核对并回复，感谢你帮助社区保持品质。</p>');
+    });
+  }
+
+  /* 表单提交 */
+  var submitBtn = document.getElementById('rsnSubmitBtn');
+  if(submitBtn){
+    submitBtn.addEventListener('click', function(){
+      var name = (document.getElementById('rsnFormName').value || '').trim();
+      var msg = (document.getElementById('rsnFormMsg').value || '').trim();
+      if(!name || !msg){
+        showToast('请填写称呼与内容后再提交');
+        return;
+      }
+      openModal('已收到你的信息',
+        '<p>' + name + '，你好：</p>' +
+        '<p>我们已记录你的来信（内容摘要：' + msg.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '）。</p>' +
+        '<p style="margin-top:12px">内容运营团队会在 3 个工作日内与你联系，请留意邮箱。</p>');
+      document.getElementById('rsnFormName').value = '';
+      document.getElementById('rsnFormMsg').value = '';
+    });
+  }
+
+  /* 灵感工具 */
+  var ideaBtn = document.getElementById('rsnIdeaBtn');
+  if(ideaBtn){
+    ideaBtn.addEventListener('click', function(){
+      var v = (document.getElementById('rsnIdeaInput').value || '').trim();
+      var theme = v || '你正在拍摄的题材';
+      var result = document.getElementById('rsnIdeaResult');
+      var items = [
+        '<b>开场建议</b>：先给一段 ' + theme + ' 的环境声，长度 8 到 10 秒，再切人物手部或背影，让观众先进入空间。',
+        '<b>结构建议</b>：用一个具体动作串起全片，例如「开门—坐下—开始工作」，比旁白更容易建立节奏。',
+        '<b>标题建议</b>：把时间与动作写进标题，例如「在' + theme + '待了一整天，我记下了这三件事」。',
+        '<b>剪辑思路</b>：保留两处长镜头作为呼吸点，情绪段落减少配乐，让现场声承担叙事。'
+      ];
+      result.innerHTML = items.map(function(t){ return '<div class="rsn-idea-item">' + t + '</div>'; }).join('');
+      showToast('已生成 4 条灵感方向');
+    });
+  }
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('rsnTopBtn');
+  window.addEventListener('scroll', function(){
+    if(!topBtn) return;
+    if(window.scrollY > 520) topBtn.classList.add('rsn-show');
+    else topBtn.classList.remove('rsn-show');
+  });
+  if(topBtn){
+    topBtn.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
+  /* 数字滚动 */
+  var counted = false;
+  function runCounter(){
+    if(counted) return;
+    counted = true;
+    var nums = document.querySelectorAll('[data-rsn-count]');
+    nums.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-rsn-count'), 10) || 0;
+      var start = performance.now();
+      var dur = 1100;
+      function step(now){
+        var p = Math.min(1, (now - start) / dur);
+        var val = Math.floor(target * (1 - Math.pow(1 - p, 3)));
+        el.textContent = val >= 10000 ? (val / 10000).toFixed(2) + '万' : String(val);
+        if(p < 1) requestAnimationFrame(step);
+        else el.textContent = target >= 10000 ? (target / 10000).toFixed(2) + '万' : String(target);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting) runCounter(); });
+    }, {threshold:.4});
+    var heroStats = document.querySelector('.rsn-stats');
+    if(heroStats) obs.observe(heroStats);
+  }else{
+    runCounter();
+  }
+
+  /* 导航高亮 */
+  var sections = ['rsnHero','rsnFocus','rsnTopics','rsnCreators','rsnRank','rsnNews','rsnFaq','rsnContact'];
+  var navLinks = document.querySelectorAll('.rsn-nav a');
+  function highlightNav(){
+    var pos = window.scrollY + (parseInt(document.documentElement.style.getPropertyValue('--rsn-top'),10) || 0) + 80;
+    var current = sections[0];
+    sections.forEach(function(id){
+      var sec = document.getElementById(id);
+      if(sec && sec.offsetTop <= pos) current = id;
+    });
+    navLinks.forEach(function(a){
+      a.classList.toggle('rsn-nav--active', a.getAttribute('href') === '#' + current);
+    });
+  }
+  window.addEventListener('scroll', highlightNav);
+  highlightNav();
+})();
+</script>
+
+</body>
+                                                                                                                                    </html>
